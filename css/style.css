@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  /*padding: 0;*/
+}
+:root {
+  font-size: 62.5%;
+  --color1: #24282f;
+  --color2: #ffffff;
+  --color3: #3c3e44;
+  --color4: #000000;
+  --color5: #dddddd;
+}
+body {
+  overflow-x: hidden;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  background-color: var(--color5);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.wrapper {
+  max-width: 320px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+section h1 {
+  text-align: center;
+  margin: 40px 0 20px;
+}
+#user {
+  border-left: 1px var(--color1) solid;
+  border-top: 1px var(--color1) solid;
+  border-bottom: 1px var(--color1) solid;
+  border-right: 0;
+  outline: none;
+  height: 30px;
+  margin-right: -5px;
+}
+#btn-submit {
+  border-right: 1px var(--color1) solid;
+  border-top: 1px var(--color1) solid;
+  border-bottom: 1px var(--color1) solid;
+  border-left: 0;
+  outline: none;
+  height: 30px;
+  background-color: var(--color3);
+  color: var(--color2);
+  font-weight: bold;
+}
+.cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.flip-container {
+  background-color: transparent;
+  min-width: 300px;
+  max-width: 400px;
+  height: 350px;
+  margin-top: 40px;
+
+  perspective: 1000px;
+}
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.flip-container:hover .card {
+  transform: rotateY(180deg);
+}
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.front {
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color1);
+  color: var(--color4);
+  padding: 0 20px;
+}
+.back {
+  align-items: baseline;
+  justify-content: start;
+  padding: 30px 20px;
+  background-color: var(--color3);
+  color: var(--color2);
+  transform: rotateY(180deg);
+  text-align: left;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--color2);
+}
+
+@media screen and (min-width: 768px) {
+  .flip-container {
+    min-width: calc(90vw / 3);
+  }
+}

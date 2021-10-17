@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <section>
+        <h1>Fetch Api Rick & Morthy</h1>
+      </section>
+      <section class="cards-container" id="app">
+        <div class="input-container">
+          <input type="number" id="user" />
+          <button @click="fetchApi" type="submit" id="btn-submit">
+            Buscar
+          </button>
+        </div>
+        <div class="flip-container">
+          <div class="card">
+            <div class="front">
+              <h3 class="title">{{title}}</h3>
+              <img v-bind:src="image" />
+            </div>
+            <div class="back">
+              <h3 class="title">Nombre: {{title}}</h3>
+              <ul>
+                <li>Especie: {{specie}}</li>
+                <li>{{gender}}</li>
+                <li>Ubicación: {{location}}</li>
+                <li>Estatus: {{alive}}</li>
+                <li>Aparece en: {{episodes}}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
