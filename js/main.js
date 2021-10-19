@@ -8,11 +8,11 @@ var app = new Vue({
     episodes: null,
     specie: null,
     gender: null,
-    url: `https://rickandmortyapi.com/api/character/1`,
+    url: "https://rickandmortyapi.com/api/character/",
   },
   methods: {
     fetchApi: function () {
-      fetch(this.url)
+      fetch(this.url.concat(document.querySelector("#user").value))
         .then((response) => response.json())
         .then((data) => {
           this.title = data.name;
@@ -27,7 +27,3 @@ var app = new Vue({
     },
   },
 });
-
-fetch("https://rickandmortyapi.com/api/character/1")
-  .then((response) => response.json())
-  .then((data) => console.log(data));
