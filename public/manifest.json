@@ -1,0 +1,33 @@
+{
+  "name": "Rick & Morthy App",
+  "short_name": "RickYMorthy",
+  "description": "Aplicacion de Personajes de Rick & Morthy",
+  "background-color": "#dddddd",
+  "orientation": "portrait",
+  "display": "standalone",
+  "theme_color": "#dddddd",
+  "start_url": "/?utm_source=homescreen",
+
+  "icons": [
+    {
+      "src": "assets/icon/icon_32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icon/icon_64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icon/icon_128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icon/icon_256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ]
+}
